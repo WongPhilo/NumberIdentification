@@ -1,0 +1,18 @@
+{% extends "default.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Number Identification{% endblock %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Upload a number!</h1>
+    <form action="/prediction" method="post" enctype=multipart/form-data>
+        <input type=file class="btn-form" name=file>
+        <input type=submit class="btn-form" value=Upload>
+    </form>
+    {% if image %}
+    <img src="../static/{{image|safe}}" width="300" height="400"><br>
+    <p class="message"><b>Number:{{number}}<b></p>
+    {% endif %}
+</div>
+{% endblock %}

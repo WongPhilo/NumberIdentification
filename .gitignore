@@ -1,0 +1,7 @@
+/.editorconfig
+/.venv
+/.vscode
+/logs
+/mnist1
+/mnist2
+/__pycache__
