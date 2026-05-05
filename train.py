@@ -29,7 +29,7 @@ model = models.Sequential([
 
 model.build(input_shape=(None, 28, 28, 1))
 model.summary()
-model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['sparse_categorical_accuracy'])
+model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['categorical_accuracy'])
 
 if __name__ == '__main__':
     model.fit(
